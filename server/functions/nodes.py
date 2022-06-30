@@ -1,27 +1,27 @@
 import json
 
-from modules.database import (getNodeForbidenConnectionsList,
-                              getNodeInConnectionsList,
-                              getNodeOutConnectionsList)
+from shared.modules.database import (get_node_forbidden_connections_list,
+                                     get_node_in_connections_list,
+                                     get_node_out_connections_list)
 
 
-def getNodeInList():
+def get_node_in_list():
    try:
-      list = getNodeInConnectionsList()
+      list = get_node_in_connections_list()
       return json.dumps(list, indent=4, sort_keys=True, default=str)
    except:
       return json.dumps({}, indent=4, sort_keys=True, default=str)
 
-def getNodeOutList():
+def get_node_out_list():
    try:
-      list = getNodeOutConnectionsList()
+      list = get_node_out_connections_list()
       return json.dumps(list, indent=4, sort_keys=True, default=str)
    except:
       return json.dumps({}, indent=4, sort_keys=True, default=str)
 
-def getNodeForbidenList():
+def get_node_forbidden_list():
    try:
-      list = getNodeForbidenConnectionsList()
+      list = get_node_forbidden_connections_list()
       return json.dumps(list, indent=4, sort_keys=True, default=str)
    except:
       return json.dumps({}, indent=4, sort_keys=True, default=str)
