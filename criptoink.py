@@ -3,13 +3,14 @@ import time
 
 from server.interfaces.cripto_ink_server import CriptoInkServer
 from server.server import Server
+from client.client import Client
 
 
 def server_threading():
     Server.cli(CriptoInkServer)
 
 def client_threading():
-    print('Start Client')
+    Client.go_to_live()
     print('=========================================')
 
 if __name__ == '__main__':
